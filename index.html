@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Desk Optimizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4b8b2d6c8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <header>
+
+        <h1>📚 Study Desk Optimizer</h1>
+
+        <p>
+            Upload a picture of your study desk and receive an AI-powered
+            productivity analysis.
+        </p>
+
+    </header>
+
+    <section class="upload-card">
+
+        <div class="preview-area">
+
+            <img id="previewImage"
+                 src="https://placehold.co/700x450?text=Upload+Desk+Photo"
+                 alt="preview">
+
+        </div>
+
+        <div class="buttons">
+
+            <input type="file"
+                   id="imageInput"
+                   accept="image/*"
+                   hidden>
+
+            <button id="uploadBtn">
+                <i class="fa-solid fa-image"></i>
+                Upload Image
+            </button>
+
+            <button id="cameraBtn">
+                <i class="fa-solid fa-camera"></i>
+                Open Camera
+            </button>
+
+            <button id="captureBtn" style="display:none;">
+                Capture
+            </button>
+
+        </div>
+
+        <video id="camera" autoplay playsinline></video>
+
+        <canvas id="canvas"></canvas>
+
+    </section>
+
+    <section class="analysis">
+
+        <div class="score-card">
+
+            <h2>Overall Score</h2>
+
+            <div class="circle">
+
+                <span id="overallScore">--</span>
+
+            </div>
+
+        </div>
+
+        <div class="metrics">
+
+            <div class="metric">
+                <span>🧹 Cleanliness</span>
+                <progress id="cleanliness" max="100" value="0"></progress>
+            </div>
+
+            <div class="metric">
+                <span>💡 Lighting</span>
+                <progress id="lighting" max="100" value="0"></progress>
+            </div>
+
+            <div class="metric">
+                <span>📚 Organization</span>
+                <progress id="organization" max="100" value="0"></progress>
+            </div>
+
+            <div class="metric">
+                <span>🪑 Ergonomics</span>
+                <progress id="ergonomics" max="100" value="0"></progress>
+            </div>
+
+            <div class="metric">
+                <span>⚡ Productivity</span>
+                <progress id="productivity" max="100" value="0"></progress>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="tips">
+
+        <h2>AI Suggestions</h2>
+
+        <ul id="tipsList">
+
+            <li>Upload an image to begin analysis.</li>
+
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
